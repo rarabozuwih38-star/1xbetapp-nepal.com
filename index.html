@@ -255,35 +255,47 @@
 </head>
 <body class="min-h-screen flex flex-col">
 
-    <!-- HEADER (Стиль 1xBet) -->
+    <!-- HEADER -->
     <header class="bg-[#0f2d47] text-white border-b border-[#12395b] sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center max-w-[1400px]">
-            <!-- Logo -->
-            <a href="https://refpa14435.com/L?tag=d_5353673m_1236c_&site=5353673&ad=1236&r=registration" class="text-2xl font-black tracking-tighter flex items-center gap-1 italic">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center max-w-[1400px] gap-4">
+            <a href="/" class="text-2xl font-black tracking-tighter flex items-center gap-1 italic shrink-0">
                 <span class="text-white">1X</span><span class="text-blue-400">BET</span>
             </a>
-            
-            <!-- Navigation (Hidden on mobile) -->
-            <nav class="hidden md:flex space-x-6 text-sm font-bold text-gray-300 uppercase">
-                <a href="https://refpa14435.com/L?tag=d_5353673m_1236c_&site=5353673&ad=1236&r=registration" class="hover:text-white transition-colors">Sports</a>
-                <a href="https://refpa14435.com/L?tag=d_5353673m_1236c_&site=5353673&ad=1236&r=registration" class="hover:text-white transition-colors flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-xb-green animate-pulse"></span> Live</a>
-                <a href="https://refpa14435.com/L?tag=d_5353673m_1236c_&site=5353673&ad=1236&r=registration" class="hover:text-white transition-colors">Esports</a>
-                <a href="https://refpa14435.com/L?tag=d_5353673m_1236c_&site=5353673&ad=1236&r=registration" class="hover:text-white transition-colors">Casino</a>
-                <a href="https://refpa14435.com/L?tag=d_5353673m_1236c_&site=5353673&ad=1236&r=registration" class="hover:text-white transition-colors text-yellow-400">Promo</a>
+            <nav class="hidden md:flex items-center gap-1 text-sm font-bold flex-1 justify-center uppercase">
+                <a href="/" class="px-3 py-2 text-white bg-[#22679b] rounded">App</a>
+                <a href="/android/" class="px-3 py-2 text-gray-300 hover:text-white transition-colors">Android</a>
+                <a href="/ios/" class="px-3 py-2 text-gray-300 hover:text-white transition-colors">iOS</a>
             </nav>
-
-            <!-- Auth Actions -->
-            <div class="flex items-center space-x-3 text-sm font-bold">
-                <div onclick="window.location.href='https://refpa14435.com/L?tag=d_5353673m_1236c_&site=5353673&ad=1236&r=registration'" class="hidden md:flex items-center gap-1 cursor-pointer hover:text-gray-300 mr-2 border border-gray-600 rounded px-2 py-1">
-                    <img src="https://flagcdn.com/w20/gb.png" alt="EN" class="w-4 h-3">
-                    <span class="font-normal text-xs">EN / 12:45</span>
-                    <i class="fa-solid fa-chevron-down text-[10px]"></i>
-                </div>
-                <button onclick="window.location.href='https://refpa14435.com/L?tag=d_5353673m_1236c_&site=5353673&ad=1236&r=registration'" class="hidden sm:block text-white hover:text-blue-200 px-4 py-2 rounded transition">LOG IN</button>
-                <button onclick="window.location.href='https://refpa14435.com/L?tag=d_5353673m_1236c_&site=5353673&ad=1236&r=registration'" class="bg-xb-green hover:bg-xb-green-hover text-white px-6 py-2 rounded shadow transition-all uppercase">REGISTRATION</button>
+            <div class="flex items-center gap-3 text-sm font-bold shrink-0">
+                <a href="/np/" class="hidden md:flex items-center gap-1.5 text-gray-300 hover:text-white transition-colors" aria-label="Nepali version">
+                    <img src="https://flagcdn.com/w20/np.png" alt="NP" class="w-5 h-3.5 rounded-sm"><span>NP</span>
+                </a>
+                <button onclick="window.location.href='https://refpa14435.com/L?tag=d_5353673m_1236c_&site=5353673&ad=1236&r=registration'" class="bg-xb-green hover:bg-xb-green-hover text-white px-4 py-2 rounded shadow text-xs md:text-sm uppercase transition-colors hidden sm:block">Registration</button>
+                <button onclick="document.getElementById('mobile-menu').classList.remove('hidden'); document.body.style.overflow='hidden'" class="md:hidden text-2xl p-1 text-gray-300" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
             </div>
         </div>
     </header>
+
+    <!-- Mobile drawer -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[100] md:hidden">
+        <div class="absolute inset-0 bg-black/70" onclick="document.getElementById('mobile-menu').classList.add('hidden'); document.body.style.overflow=''"></div>
+        <div class="absolute top-0 right-0 w-[280px] max-w-[85vw] h-full bg-[#0f2d47] text-white shadow-2xl flex flex-col">
+            <div class="flex justify-between items-center px-5 py-4 border-b border-[#12395b]">
+                <span class="font-black italic text-lg"><span class="text-white">1X</span><span class="text-blue-400">BET</span></span>
+                <button onclick="document.getElementById('mobile-menu').classList.add('hidden'); document.body.style.overflow=''" class="text-2xl p-1" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <nav class="flex-1 px-3 py-4 flex flex-col gap-1 text-sm font-bold uppercase">
+                <a href="/" class="px-4 py-3 rounded bg-[#22679b]">App Review</a>
+                <a href="/android/" class="px-4 py-3 rounded hover:bg-[#22679b]">Android</a>
+                <a href="/ios/" class="px-4 py-3 rounded hover:bg-[#22679b]">iOS</a>
+                <div class="my-3 border-t border-[#12395b]"></div>
+                <a href="/np/" class="px-4 py-3 rounded hover:bg-[#22679b] flex items-center gap-2"><img src="https://flagcdn.com/w20/np.png" alt="NP" class="w-5 h-3.5 rounded-sm"> नेपाली संस्करण</a>
+            </nav>
+            <div class="px-4 py-4 border-t border-[#12395b]">
+                <button onclick="window.location.href='https://refpa14435.com/L?tag=d_5353673m_1236c_&site=5353673&ad=1236&r=registration'" class="w-full bg-xb-green hover:bg-xb-green-hover text-white py-3 rounded font-bold uppercase">Registration</button>
+            </div>
+        </div>
+    </div>
 
     <!-- MAIN HERO SECTION -->
     <section class="relative overflow-hidden bg-gradient-to-br from-[#f8fbff] to-[#e4f0fb]">
@@ -802,16 +814,29 @@
         </div>
     </article>
 
-    <!-- FOOTER (Стиль 1xBet) -->
-    <footer class="bg-[#12161b] text-[#8695a5] py-8 border-t-4 border-xb-header text-center text-xs mt-auto">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-center gap-6 text-2xl mb-6 text-gray-500">
+    <!-- FOOTER -->
+    <footer class="bg-[#12161b] text-[#8695a5] py-8 border-t-4 border-xb-header text-xs mt-auto">
+        <div class="container mx-auto px-4 max-w-[1200px]">
+            <nav class="flex flex-wrap justify-center gap-x-5 gap-y-2 mb-6 font-bold text-[11px] uppercase tracking-wide">
+                <a href="/" class="hover:text-white transition-colors">App Review</a>
+                <span class="text-gray-700">·</span>
+                <a href="/android/" class="hover:text-white transition-colors">Android</a>
+                <span class="text-gray-700">·</span>
+                <a href="/ios/" class="hover:text-white transition-colors">iOS</a>
+                <span class="text-gray-700">·</span>
+                <a href="/np/" class="hover:text-white transition-colors flex items-center gap-1.5">
+                    <img src="https://flagcdn.com/w20/np.png" alt="NP" class="w-4 h-2.5 rounded-sm"> नेपाली
+                </a>
+            </nav>
+            <div class="flex justify-center gap-6 text-2xl mb-4 text-gray-500">
                 <i class="fa-brands fa-cc-visa hover:text-white transition-colors cursor-pointer" onclick="window.location.href='https://refpa14435.com/L?tag=d_5353673m_1236c_&site=5353673&ad=1236&r=registration'"></i>
                 <i class="fa-brands fa-cc-mastercard hover:text-white transition-colors cursor-pointer" onclick="window.location.href='https://refpa14435.com/L?tag=d_5353673m_1236c_&site=5353673&ad=1236&r=registration'"></i>
                 <i class="fa-brands fa-bitcoin hover:text-white transition-colors cursor-pointer" onclick="window.location.href='https://refpa14435.com/L?tag=d_5353673m_1236c_&site=5353673&ad=1236&r=registration'"></i>
             </div>
-            <p class="mb-2">© 2007-2026 1xBet. All rights reserved. 18+</p>
-            <p class="opacity-70">Gambling can be addictive. Play responsibly.</p>
+            <div class="text-center">
+                <p class="mb-2">© 2007-2026 1xBet. All rights reserved. 18+</p>
+                <p class="opacity-70">Gambling can be addictive. Play responsibly.</p>
+            </div>
         </div>
     </footer>
 
